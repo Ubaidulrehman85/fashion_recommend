@@ -1,0 +1,8 @@
+scikit-learn==1.2.2
+Pillow
+bing_image_downloader
+streamlit
+bokeh
+joblib
+numpy==1.23.1
+mxnet-mkl==1.6.0
