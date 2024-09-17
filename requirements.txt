@@ -4,4 +4,4 @@ setuptools
 cython
 numpy
 pandas
-python-distutils
+python-distutils-extra
