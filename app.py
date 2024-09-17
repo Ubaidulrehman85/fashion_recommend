@@ -4,6 +4,7 @@ import joblib
 import requests
 import numpy as np
 import webbrowser
+
 # Load the trained model and label encoders
 model = joblib.load('dress_recommendation_model1.pkl')
 label_encoders = joblib.load('label_encoders.pkl')
@@ -72,12 +73,16 @@ occasion = st.selectbox("Occasion", occasion_options)
 if st.button("Recommend"):
     images = predict_dress(gender, age, country, occasion)
     
-    # Display the recommended dress images
+    # Display the recommended dress images in a gallery view
     if images:
-        for img_url in images:
-            st.image(img_url, caption="Recommended Dress", width=200)
+        cols = st.columns(3)  # Create 3 columns for the gallery view
+        for idx, img_url in enumerate(images):
+            with cols[idx % 3]:  # Cycle through columns
+                st.image(img_url, caption="Recommended Dress", width=200)
     else:
         st.write("No images available or an error occurred.") 
+
+# "Shop Now" button
 URL_STRING = "http://localhost/weiboo/PHP/index-two.php"
 st.markdown(
     f'<div style="position: absolute; top: 10px; right: 0px;">'
