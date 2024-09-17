@@ -4,4 +4,5 @@ setuptools
 cython
 numpy
 pandas
-
+bokeh
+mxnet-mkl==1.6.0
