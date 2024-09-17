@@ -2,3 +2,4 @@ scikit-learn==1.0.2  # Example version
 streamlit==1.21.0    # Example version
 numpy==1.23.1        # Example version
 pandas==1.5.0
+python-distutils
