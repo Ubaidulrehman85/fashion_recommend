@@ -1,7 +1,7 @@
-scikit-learn==1.0.2
+scikit-learn
 wheel
 setuptools
 cython
-numpy==1.21.0
-pandas==1.3.3
+numpy
+pandas
 python-distutils
