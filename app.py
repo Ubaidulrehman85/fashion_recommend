@@ -3,7 +3,7 @@ import pandas as pd
 import joblib
 import requests
 import numpy as np
-
+import webbrowser
 # Load the trained model and label encoders
 model = joblib.load('dress_recommendation_model1.pkl')
 label_encoders = joblib.load('label_encoders.pkl')
@@ -78,3 +78,10 @@ if st.button("Recommend"):
             st.image(img_url, caption="Recommended Dress", width=200)
     else:
         st.write("No images available or an error occurred.") 
+URL_STRING = "http://localhost/weiboo/PHP/index-two.php"
+st.markdown(
+    f'<div style="position: absolute; top: 10px; right: 0px;">'
+    f'<a href="{URL_STRING}" style="display: inline-block; padding: 12px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; font-size: 16px; border-radius: 4px;">Shop Now</a>'
+    f'</div>',
+    unsafe_allow_html=True
+)
